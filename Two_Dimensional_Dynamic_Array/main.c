@@ -4,17 +4,17 @@
 int main()
 {
    int** ptr;
-   int i,j,satir_sayisi,sutun_sayisi;
-   scanf("%d", &satir_sayisi);
-   scanf("%d", &sutun_sayisi);
+   int i,j,number_lines,number_columns;
+   scanf("%d", &number_lines);
+   scanf("%d", &number_columns);
 
 
-   ptr= (int**)malloc(sizeof(int*)*satir_sayisi);
+   ptr= (int**)malloc(sizeof(int*)*number_lines);
 
-   for(i=0; i<satir_sayisi; i++)
+   for(i=0; i<number_lines; i++)
    {
-       *(ptr+i)=(int*)malloc(sizeof(int)*sutun_sayisi);
-       for(j=0; j<sutun_sayisi; j++)
+       *(ptr+i)=(int*)malloc(sizeof(int)*number_columns);
+       for(j=0; j<number_columns; j++)
         {
         *(*(ptr+i)+j)= rand()%100;
        printf("%d ", *(*(ptr+i)+j) );
